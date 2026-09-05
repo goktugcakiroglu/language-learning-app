@@ -1,5 +1,7 @@
 # Language Detective 🕵️‍♂️✨
 
+[![Language Detective CI](https://github.com/goktugcakiroglu/language-learning-app/actions/workflows/node-ci.yml/badge.svg)](https://github.com/goktugcakiroglu/language-learning-app/actions/workflows/node-ci.yml)
+
 Language Detective is a professional, global SaaS MVP designed to transform vocabulary acquisition into a visual and interactive "rabbit hole" experience. Rather than serving as a standard dictionary, it acts as a semantic exploration engine powered by AI.
 
 ## 🚀 Key Features
@@ -21,6 +23,9 @@ Language Detective is a professional, global SaaS MVP designed to transform voca
 The project follows a highly modular, clean architecture ready for future scaling:
 
     language-learning-app/
+    ├── .github/                  # CI/CD Pipelines
+    │   └── workflows/
+    │       └── node-ci.yml       # GitHub Actions test runner
     ├── backend/                  # Node.js + Express + TS
     │   ├── src/
     │   │   ├── controllers/      # Handles incoming HTTP requests
