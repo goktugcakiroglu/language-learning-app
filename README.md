@@ -16,7 +16,7 @@ Language Detective is a professional, global SaaS MVP designed to transform voca
 
 * **Frontend:** React, Tailwind CSS, React Flow, Lucide Icons
 * **Backend:** Node.js, TypeScript, Express.js
-* **AI & Data:** Google Gemini API (gemini-1.5-flash), Pollinations AI (Image Generation)
+* **AI & Data:** Google Gemini API, Pollinations AI (Image Generation)
 
 ## 📂 Folder Structure
 
@@ -104,7 +104,7 @@ graph TD
     end
 
     subgraph External APIs [AI Providers]
-        F -->|Prompt Engineering| G((Gemini 1.5 Flash))
+        F -->|Prompt Engineering| G((Google Gemini API))
         F -->|Image Prompt| H((Pollinations AI))
         G --> I[Construct JSON Payload]
         H --> I
