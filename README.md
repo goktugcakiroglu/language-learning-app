@@ -103,7 +103,7 @@ graph TD
         D -->|No| F[Strategy Engine]
     end
 
-    subgraph External APIs [AI Providers]
+    subgraph ExternalAPIs [AI Providers]
         F -->|Prompt Engineering| G((Google Gemini API))
         F -->|Image Prompt| H((Pollinations AI))
         G --> I[Construct JSON Payload]
@@ -116,5 +116,5 @@ graph TD
     
     style Frontend fill:#1e293b,stroke:#3b82f6,stroke-width:2px,color:#fff
     style Backend fill:#0f172a,stroke:#10b981,stroke-width:2px,color:#fff
-    style External APIs fill:#332115,stroke:#f59e0b,stroke-width:2px,color:#fff
+    style ExternalAPIs fill:#332115,stroke:#f59e0b,stroke-width:2px,color:#fff
 ```

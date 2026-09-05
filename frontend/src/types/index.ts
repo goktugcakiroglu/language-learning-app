@@ -32,4 +32,5 @@ export interface LinguisticDetail {
   antonyms: string[];
   relatedWords?: string[];
   visualConcept: VisualConcept;
+  translation?: string;
 }
