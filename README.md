@@ -84,5 +84,37 @@ You can set up the entire project by running the following commands in your term
     # Terminal 2 (Frontend): cd frontend && npm run dev
 
 ## 🧠 Architecture Highlights
-* **Strategy Pattern:** The application logic utilizes the Strategy Pattern (e.g., EnglishStrategy.ts) to allow seamless scalability for future multi-language support.
-* **Auto-Fit Graph Layout:** React Flow's canvas automatically scales and centers (fitView) to maintain a clean UI regardless of monitor size or data complexity.
+
+* **Strategy Pattern:** The application logic utilizes the Strategy Pattern (e.g., `EnglishStrategy.ts`) to allow seamless scalability for future multi-language support.
+* **Auto-Fit Graph Layout:** React Flow's canvas automatically scales and centers (`fitView`) to maintain a clean UI regardless of monitor size or data complexity.
+
+### System Flow & AI Integration
+
+```mermaid
+graph TD
+    subgraph Frontend [Client UI]
+        A[User Inputs Word] -->|Search Request| B(React + Vite)
+        B -->|Renders| C[React Flow Mind Map & UI]
+    end
+
+    subgraph Backend [Node.js + Express]
+        B -->|HTTP GET /api/word| D{Cache Hit?}
+        D -->|Yes| E[Return Cached Data]
+        D -->|No| F[Strategy Engine]
+    end
+
+    subgraph External APIs [AI Providers]
+        F -->|Prompt Engineering| G((Gemini 1.5 Flash))
+        F -->|Image Prompt| H((Pollinations AI))
+        G --> I[Construct JSON Payload]
+        H --> I
+    end
+
+    I -->|Save| J[(Local Cache)]
+    J --> E
+    E -.->|Update State| C
+    
+    style Frontend fill:#1e293b,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style Backend fill:#0f172a,stroke:#10b981,stroke-width:2px,color:#fff
+    style External APIs fill:#332115,stroke:#f59e0b,stroke-width:2px,color:#fff
+```
