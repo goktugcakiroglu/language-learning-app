@@ -55,7 +55,7 @@ export default function WordGraph({ data, onWordClick }: WordGraphProps) {
     }
 
     // 3. Anlamlar (Definitions) - ARALIKLAR GENİŞLETİLDİ (80 -> 130) VE MAX-WIDTH EKLENDİ
-    data.definitions?.forEach((def, i) => {
+    /*data.definitions?.forEach((def, i) => {
       const defId = `def-${i}`;
       newNodes.push({
         id: defId,
@@ -64,7 +64,7 @@ export default function WordGraph({ data, onWordClick }: WordGraphProps) {
         style: { borderRadius: '12px', padding: '12px', backgroundColor: '#fff', border: '2px solid #e2e8f0', minWidth: '250px', maxWidth: '350px', textAlign: 'center', fontSize: '13px', color: '#334155' },
       });
       newEdges.push({ id: `e-word-${defId}`, source: 'center-word', target: defId, style: edgeStyle, markerEnd });
-    });
+    });*/
 
     // 4. Ekler (Prefix/Suffix) - UZUN YAZILAR KIRPILDI VE UZAKLAŞTIRILDI
     data.affixes?.forEach((affix, i) => {
