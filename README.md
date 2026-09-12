@@ -22,6 +22,7 @@ Language Detective is a professional, global SaaS MVP designed to transform voca
 
 The project follows a highly modular, clean architecture ready for future scaling:
 
+```text
     language-learning-app/
 ├── .github/
 │   └── workflows/
@@ -74,6 +75,7 @@ The project follows a highly modular, clean architecture ready for future scalin
     ├── .gitignore
     ├── package.json
     └── tsconfig.json
+```
 
 ## Getting Started
 
