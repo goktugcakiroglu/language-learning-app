@@ -23,37 +23,57 @@ Language Detective is a professional, global SaaS MVP designed to transform voca
 The project follows a highly modular, clean architecture ready for future scaling:
 
     language-learning-app/
-    ├── .github/                  # CI/CD Pipelines
-    │   └── workflows/
-    │       └── node-ci.yml       # GitHub Actions test runner
-    ├── backend/                  # Node.js + Express + TS
-    │   ├── src/
-    │   │   ├── controllers/      # Handles incoming HTTP requests
-    │   │   ├── services/         # Core business logic
-    │   │   ├── strategies/       # Strategy Pattern (English, Spanish, etc.)
-    │   │   ├── factories/        # Factory Pattern for strategies
-    │   │   ├── repositories/     # Data access abstraction (Cache/DB)
-    │   │   ├── routes/           # API endpoints
-    │   │   ├── types/            # TypeScript Interfaces
-    │   │   ├── utils/            # Helper functions
-    │   │   ├── app.ts            # Express configuration
-    │   │   └── server.ts         # Server entry point
-    │   ├── package.json
-    │   └── tsconfig.json
-    │
-    └── frontend/                 # React + Vite + TS + Tailwind
-        ├── src/
-        │   ├── components/       # Reusable UI components (WordCard, WordGraph)
-        │   ├── features/         # Feature-based modules
-        │   ├── hooks/            # Custom React Hooks
-        │   ├── services/         # API Integration (Axios/Fetch)
-        │   ├── store/            # State Management
-        │   ├── types/            # Frontend specific types
-        │   ├── App.tsx
-        │   └── main.tsx
-        ├── tailwind.config.js
-        ├── package.json
-        └── tsconfig.json
+├── .github/
+│   └── workflows/
+│       └── node-ci.yml                     # GitHub Actions CI/CD test runner
+├── backend/                                # Node.js + Express Backend
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   └── WordController.ts           # Handles incoming HTTP requests & responses
+│   │   ├── factories/
+│   │   │   └── LanguageStrategyFactory.ts  # Factory pattern for language strategies
+│   │   ├── repositories/
+│   │   │   ├── GeminiWordRepository.ts     # Concrete AI data implementation
+│   │   │   └── IWordRepository.ts          # Data access abstraction interface
+│   │   ├── routes/
+│   │   │   └── wordRoutes.ts               # API endpoint definitions
+│   │   ├── services/
+│   │   │   └── WordService.ts              # Core business logic and orchestration
+│   │   ├── strategies/
+│   │   │   └── EnglishStrategy.ts          # Strategy pattern for English output
+│   │   ├── types/
+│   │   │   └── index.ts                    # Backend TypeScript interfaces
+│   │   ├── utils/                          # Helper functions and utilities
+│   │   ├── app.ts                          # Express configuration & middleware
+│   │   └── server.ts                       # Backend entry point
+│   ├── .env                                # Environment variables (API keys)
+│   ├── package.json
+│   └── tsconfig.json
+│
+└── frontend/                               # React + Vite + Tailwind Frontend
+    ├── public/                             # Public static assets
+    ├── src/
+    │   ├── assets/
+    │   │   ├── hero.png                    # App graphics and illustrations
+    │   │   ├── react.svg
+    │   │   └── vite.svg
+    │   ├── components/
+    │   │   ├── WordCard.tsx                # UI component for word dictionary details
+    │   │   └── WordGraph.tsx               # React Flow interactive mind map
+    │   ├── features/                       # Feature-based modular logic
+    │   ├── hooks/                          # Custom React hooks for state/lifecycle
+    │   ├── services/
+    │   │   └── api.ts                      # Axios/Fetch client for backend endpoints
+    │   ├── store/                          # Global state management
+    │   ├── types/
+    │   │   └── index.ts                    # Frontend TypeScript interfaces
+    │   ├── App.css
+    │   ├── App.tsx                         # Main application layout component
+    │   ├── index.css                       # Global styles and Tailwind directives
+    │   └── main.tsx                        # Frontend DOM entry point
+    ├── .gitignore
+    ├── package.json
+    └── tsconfig.json
 
 ## 📦 Getting Started
 
