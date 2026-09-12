@@ -1,10 +1,10 @@
-# Language Detective 🕵️‍♂️✨
+# Language Detective 
 
 [![Language Detective CI](https://github.com/goktugcakiroglu/language-learning-app/actions/workflows/node-ci.yml/badge.svg)](https://github.com/goktugcakiroglu/language-learning-app/actions/workflows/node-ci.yml)
 
 Language Detective is a professional, global SaaS MVP designed to transform vocabulary acquisition into a visual and interactive "rabbit hole" experience. Rather than serving as a standard dictionary, it acts as a semantic exploration engine powered by AI.
 
-## 🚀 Key Features
+## Key Features
 
 * **Interactive Linguistic Mind Maps:** Built with React Flow, visualizing etymology, prefixes, suffixes, synonyms, and antonyms dynamically.
 * **Semantic Clustering (Rabbit Hole Effect):** Users can seamlessly jump from one related concept to another without reloading, creating an infinite learning loop.
@@ -12,13 +12,13 @@ Language Detective is a professional, global SaaS MVP designed to transform voca
 * **Strict English-First Output:** Backed by strict prompt engineering ensuring all definitions, context tags, and explanations are output in professional-grade English.
 * **Cache-First Architecture:** Eliminates redundant API calls and prevents quota exhaustion by storing previously analyzed words in a local cache.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Frontend:** React, Tailwind CSS, React Flow, Lucide Icons
 * **Backend:** Node.js, TypeScript, Express.js
 * **AI & Data:** Google Gemini API, Pollinations AI (Image Generation)
 
-## 📂 Folder Structure
+## Folder Structure
 
 The project follows a highly modular, clean architecture ready for future scaling:
 
@@ -75,7 +75,7 @@ The project follows a highly modular, clean architecture ready for future scalin
     ├── package.json
     └── tsconfig.json
 
-## 📦 Getting Started
+## Getting Started
 
 ### Prerequisites
 * Node.js (v18 or higher)
@@ -103,7 +103,7 @@ You can set up the entire project by running the following commands in your term
     # Terminal 1 (Backend): cd backend && npm run dev
     # Terminal 2 (Frontend): cd frontend && npm run dev
 
-## 🧠 Architecture Highlights
+## Architecture Highlights
 
 * **Strategy Pattern:** The application logic utilizes the Strategy Pattern (e.g., `EnglishStrategy.ts`) to allow seamless scalability for future multi-language support.
 * **Auto-Fit Graph Layout:** React Flow's canvas automatically scales and centers (`fitView`) to maintain a clean UI regardless of monitor size or data complexity.
